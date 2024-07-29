@@ -1,0 +1,8 @@
+{
+  "bundles": {
+    "hello-world-web-part": {
+      "dependencies": [],
+      "asyncChunks": {}
+    }
+  }
+}

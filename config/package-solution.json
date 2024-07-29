@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "dev-client-side-solution",
+    "id": "8893e1ae-4355-4dd7-b355-e8bd8efebe6e",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.19.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "dev description"
+      },
+      "longDescription": {
+        "default": "dev description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "dev Feature",
+        "description": "The feature that activates elements of the dev solution.",
+        "id": "7d180d41-13f3-49f0-ab9a-09eda26a5ec1",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/dev.sppkg"
+  }
+}
