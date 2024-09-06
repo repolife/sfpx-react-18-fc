@@ -8,5 +8,5 @@ export declare namespace HelloWorld {
         userDisplayName: string;
     }
 }
-export declare function HelloWorld(props: HelloWorld.Props): JSX.Element;
+export declare const HelloWorld: (props: HelloWorld.Props) => JSX.Element;
 //# sourceMappingURL=HelloWorld.d.ts.map

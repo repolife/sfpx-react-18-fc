@@ -15,6 +15,28 @@ build.rig.getTasks = function () {
   return result;
 };
 
-build.tslintCmd.enabled = false;
+/* fast-serve */
+const { addFastServe } = require("spfx-fast-serve-helpers");
+addFastServe(build);
+/* end of fast-serve */
+
+// TailwindCSS
+const postcss = require("gulp-postcss");
+const atimport = require("postcss-import");
+const tailwind = require("tailwindcss");
+
+const tailwindcss = build.subTask(
+  "tailwindcss",
+  function (gulp, buildOptions, done) {
+    gulp
+      .src("./src/main.css")
+      .pipe(postcss([atimport(), tailwind("./tailwind.config.js")]))
+      .pipe(gulp.dest("dist"));
+    done();
+  },
+);
+build.rig.addPreBuildTask(tailwindcss);
+
+// end TailwindCSS
 
 build.initialize(require("gulp"));

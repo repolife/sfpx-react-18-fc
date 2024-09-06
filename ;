@@ -14,7 +14,7 @@
     "bundle": "npm-run-all taildwindcss build",
     "bundle:ship": "npm-run-all taildwindcss build:ship",
     "webpack:serve": "fast-serve",
-    "serve": "npm-run-all -p tailwindcss:watch webpack:serve",
+    "serve": "gulp bundle --custom-serve --max_old_space_size=4096 && fast-serve"
     "taildwindcss": "tailwindcss -i ./src/main.css -o ./src/dist/main.css --minify --postcss postcss.config.js",
     "tailwindcss:watch": "tailwindcss -i ./src/main.css -o ./src/dist/main.css --watch --minify --postcss postcss.config.js"
   },
@@ -33,7 +33,6 @@
     "@pnp/sp": "^4.3.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-query": "^3.39.3",
     "tslib": "2.3.1",
     "vitest": "^2.0.4"
   },
