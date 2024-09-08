@@ -15,8 +15,8 @@
     "bundle:ship": "npm-run-all taildwindcss build:ship",
     "webpack:serve": "fast-serve",
     "serve": "npm-run-all -p tailwindcss:watch webpack:serve",
-    "taildwindcss": "tailwindcss -i ./src/main.css -o ./src/dist/main.css --minify --postcss postcss.config.js",
-    "tailwindcss:watch": "tailwindcss -i ./src/main.css -o ./src/dist/main.css --watch --minify --postcss postcss.config.js"
+    "taildwindcss": "tailwindcss -i ./src/global.css -o ./src/dist/global.css --minify --postcss postcss.config.js",
+    "tailwindcss:watch": "tailwindcss -i ./src/global.css -o ./src/dist/global.css --watch --minify --postcss postcss.config.js"
   },
   "dependencies": {
     "@fluentui/react": "^8.119.3",
@@ -31,9 +31,14 @@
     "@pnp/graph": "^4.3.0",
     "@pnp/logging": "^4.3.0",
     "@pnp/sp": "^4.3.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.439.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-query": "^3.39.3",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss-animate": "^1.0.7",
     "tslib": "2.3.1",
     "vitest": "^2.0.4"
   },

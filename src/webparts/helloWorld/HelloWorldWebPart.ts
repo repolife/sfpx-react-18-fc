@@ -5,7 +5,7 @@ import { BaseClientSideWebPart } from "@microsoft/sp-webpart-base";
 import { HelloWorld } from "./components/HelloWorld";
 import "@pnp/sp/webs";
 import { getSP } from "../pnpjsConfig";
-import "../../dist/main.css";
+import "../../dist/global.css";
 import {
   QueryClientProvider,
   QueryClient,

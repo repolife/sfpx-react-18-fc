@@ -1,6 +1,6 @@
 import { BaseClientSideWebPart } from "@microsoft/sp-webpart-base";
 import "@pnp/sp/webs";
-import "../../dist/main.css";
+import "../../dist/global.css";
 export interface IHelloWorldWebPartProps {
     description: string;
 }

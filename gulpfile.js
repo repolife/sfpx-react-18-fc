@@ -29,9 +29,14 @@ const tailwindcss = build.subTask(
   "tailwindcss",
   function (gulp, buildOptions, done) {
     gulp
-      .src("./src/main.css")
-      .pipe(postcss([atimport(), tailwind("./tailwind.config.js")]))
-      .pipe(gulp.dest("dist"));
+      .src("./src/global.css")
+      .pipe(
+        postcss({ to: "./src/output.css" }, [
+          atimport(),
+          tailwind("./tailwind.config.js"),
+        ]),
+      )
+      .pipe(gulp.dest("assets/dist"));
     done();
   },
 );
