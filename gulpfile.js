@@ -1,10 +1,20 @@
 "use strict";
 
 const build = require("@microsoft/sp-build-web");
-
+const path = require("path");
 build.addSuppression(
   `Warning - [sass] The local CSS class 'ms-Grid' is not camelCase and will not be type-safe.`,
 );
+build.configureWebpack.mergeConfig({
+  additionalConfiguration: (generatedConfiguration) => {
+    generatedConfiguration.resolve.alias = {
+      // components folder
+      "@components": path.resolve(__dirname, "./lib/components"),
+      "@": path.resolve(__dirname, "./lib"),
+    };
+    return generatedConfiguration;
+  },
+});
 
 var getTasks = build.rig.getTasks;
 build.rig.getTasks = function () {
@@ -41,7 +51,6 @@ const tailwindcss = build.subTask(
   },
 );
 build.rig.addPreBuildTask(tailwindcss);
-
 // end TailwindCSS
 
 build.initialize(require("gulp"));

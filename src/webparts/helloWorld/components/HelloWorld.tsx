@@ -6,7 +6,7 @@ import { useQuery } from "react-query";
 import { _SPQueryable } from "@pnp/sp";
 import { _Item, _Items } from "@pnp/sp/items/types";
 import { _List, _Lists } from "@pnp/sp/lists/types";
-import { Alert, AlertDescription, AlertTitle } from "./ui/alert";
+import { Alert, AlertDescription, AlertTitle } from "@components/ui/alert";
 
 export namespace HelloWorld {
   export interface Props {

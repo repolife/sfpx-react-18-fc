@@ -13,10 +13,10 @@
     "outDir": "lib",
     "inlineSources": false,
     "noImplicitAny": true,
-    "baseUrl": "./src/webparts/helloWorld/",
+    "baseUrl": "src",
     "paths": {
       "@/*": ["./*"],
-      "@components": ["./src/webparts/helloWorld/components/*"]
+      "@components/*": ["./components/*"]
     },
     "typeRoots": ["./node_modules/@types", "./node_modules/@microsoft"],
     "types": ["webpack-env"],
